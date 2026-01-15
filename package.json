@@ -1,0 +1,36 @@
+{
+  "name": "apex-titan-omega-singularity",
+  "version": "102.2.0",
+  "description": "0.000000000000000001% Elite Virtual MEV Singularity Mesh",
+  "main": "index.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "monitor": "pm2 start index.js --name apex-titan-omega --exp-backoff-restart-delay 100",
+    "logs": "pm2 logs apex-titan-omega",
+    "stop": "pm2 stop apex-titan-omega"
+  },
+  "dependencies": {
+    "ethers": "5.7.2",
+    "@flashbots/ethers-provider-bundle": "0.6.2",
+    "graphology": "0.26.0",
+    "graphology-library": "0.26.0",
+    "dotenv": "16.4.5",
+    "ws": "8.18.0",
+    "performance-now": "2.1.0",
+    "axios": "1.7.9",
+    "colored": "1.0.1"
+  },
+  "devDependencies": {
+    "pm2": "5.4.3",
+    "nodemon": "3.1.9"
+  },
+  "author": "Apex Architect",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "private"
+  }
+}
